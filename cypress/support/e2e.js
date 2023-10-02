@@ -26,6 +26,7 @@ const userPhone = "5555551234";
 const password = "123456";
 
 before(() => {
+  // if user.json exists and have email and password credentials, then login
   cy.fixture("user").then((userdata) => {
     if (userdata.email && userdata.password) {
       // login
